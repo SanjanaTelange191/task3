@@ -1,0 +1,119 @@
+*{
+   margin:0;
+   padding:0;
+}
+
+nav{
+    background-color: rgb(78, 10, 142);
+    color: aliceblue;
+    height:50px ;
+    font-size: 27px;
+    display:flex;
+    
+    align-items: center;
+    padding: 0 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul{
+    list-style-type: none;
+   
+}
+
+.gameContainer{
+    /* background-color: rgb(156, 243, 243); */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container{
+    display: grid;
+    padding-top: 5px;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(227, 213, 241);
+}
+.info{
+    font-size: 22px;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+   transition: width is ease-in-out;
+}
+
+.br-0{
+
+    border-right: 0;
+}
+
+.bl-0{
+    border-left:0;
+}
+
+.bt-0{
+    border-top:0;
+}
+
+.bd-0{
+    border-bottom:0;
+}
+
+#reset{
+    border-radius: 10px;
+    font-size:20px;
+    margin: 0px 23px ;
+    padding: 3px 10px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #813aeb;
+    transition: width 1s ease-in-out;
+    /* line-height: 5px; */
+
+}
+
+@media screen  and (max-width: 800px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
+
